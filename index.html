@@ -4,7 +4,7 @@
 
 <h1>Test page</h1>
 
-<p>Text7</p>
+<p>Text6</p>
   <script>
 var links = [
               "google.com",
@@ -16,7 +16,7 @@ var links = [
               // get a random number between 0 and the number of links
               var randIdx = Math.random() * links.length;
               // round it, so it can be used as array index
-              randIdx = Math.floor(randIdx);
+              randIdx = parseInt(randIdx, 10);
               // construct the link to be opened
               var link = 'https://www.' + links[randIdx];
 
@@ -34,7 +34,7 @@ var links = [
     var d = 0
     for (let step = 0; step < 100; step++) {
       let x = Math.random() * links.length;
-      x = Math.floor(x);
+      x = parseInt(x, 10);
       if (x == 0) { a++; }
       if (x == 1) { b++; }
       if (x == 2) { c++; }
