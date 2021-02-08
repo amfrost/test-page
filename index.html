@@ -4,7 +4,7 @@
 
 <h1>Test page</h1>
 
-<p>Text6</p>
+<p>Text7</p>
   <script>
 var links = [
               "google.com",
@@ -14,11 +14,32 @@ var links = [
 
            var openSite = function() {
               // get a random number between 0 and the number of links
+             
+             var a1 = 0
+          var b1 = 0
+    var c1 = 0
+    var d1 = 0
+    for (let step = 0; step < 100; step++) {
+      let x = Math.random() * links.length;
+      x = parseInt(x, 10);
+      if (x == 0) { a1++; }
+      if (x == 1) { b1++; }
+      if (x == 2) { c1++; }
+      if (x == 3) { d1++; }
+    }
+    console.log(a1)
+    console.log(b1)
+    console.log(c1)
+    console.log(d1)
+             
+             
+             
+             
               var randIdx = Math.random() * links.length;
               // round it, so it can be used as array index
               randIdx = parseInt(randIdx, 10);
               // construct the link to be opened
-              var link = 'https://www.' + links[randIdx];
+              var link = 'https://www.' + links[x];
 
 //      return link;
              window.location.href = link;
